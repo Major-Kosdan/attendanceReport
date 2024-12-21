@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: url("student.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(8, 186, 23, 0.7);
+    background-blend-mode: lighten;
+
+}
+
+.loginform{
+    width: min(450px,95%);
+    height:650px;
+    border: 5px solid green;
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: 0 0 50px black;
+    border-radius: 10px;
+    transition: all 200s;
+}
+
+.loginform:hover{
+    box-shadow: 0 0 100px 0px rgb(214, 211, 230), 0 0 400px 10px rgb(252, 252, 254);
+    animation: blink 1s infinite;
+    background: white;
+}
+@keyframes blink{
+    0%,100%{
+    box-shadow: 0 0 100px 0px green, 0 0 400px 10px green;
+  
+    }
+    40%,50%,60%{
+     box-shadow: 0 0 50px 0px green, 0 0 100px 0px green;
+  
+    }
+}
+
+.inputgroup{
+    position: relative;
+    height: 50px;
+    width: 85%;
+    margin-top: -350px;
+    margin-bottom: 0;
+}
+
+.inputgroup input{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: solid 1px green;
+    color: black;
+    font-size: 20px;
+    transition: all 200ms;
+}
+
+.inputgroup label{
+    position: absolute;
+    transition: all 200ms;
+    color: brown;
+    font-size: 18px;
+   
+}
+
+.inputgroup input:hover +label,
+.inputgroup input:focus +label,
+.inputgroup input:valid +label
+{
+    transform: translateY(-20px);
+    color: green
+}
+
+.inputgroup input:hover,
+.inputgroup input:focus,
+.inputgroup input:valid 
+{
+    border-bottom: solid 1px rgb(115, 179, 20);
+}
+
+.topmargin{
+    margin-top: 50px;
+}
+
+.topmarginlarge{
+    margin-top: 80px;
+}
+
+.divcallforaction{
+    width: 85%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnlogin{
+    border: none;
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    transition: all 200ms;
+    margin-top: -85px;
+    cursor: pointer;
+}
+
+.btnlogin:hover{
+    box-shadow: 0 0 20px white;
+    transform: translateY(-5px);
+}
+
+.inactivecolor{
+    background-color: brown;
+}
+
+.activecolor{
+    background-color: green;
+}
+
+
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    padding: 10px;
+    font-size: 16px;
+    margin-top:5px;
+    border: 1px solid white;
+    color: rgb(224, 232, 224);
+    border-radius: 5px;
+}
+
+.logo{
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-top: -25px;
+}
+
+.login_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.text_wrapper{
+    margin-top: -50px;
+    text-align: center;
+}
+
+.text_wrapper h1,
+.text_wrapper p{
+    margin: 0;
+    line-height: 1.5;
+}
+
+.text_wrapper h1{
+    color: green;
+}
+
+.scrolling_text{
+    position: absolute;
+    top: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    animation: scrollText 35s linear infinite;
+    margin: 0;
+    white-space: nowrap;
+}
+
+@keyframes scrollText {
+    0%{
+    transform: translateX(-100%);
+    }
+    100%{
+    transform: translateX(100%);
+    }
+    
+}
+
+.diverror{
+    background-color: transparent;
+    color: brown;
+    font-size: 18px;
+    font-weight: 10px;
+    height: 45px;
+    width: 85%;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+    letter-spacing: 1px;
+}
+
+.applyerrordiv{
+    visibility: visible;
+    opacity: 1;
+    animation: falldown 2s linear;
+}
+@keyframes falldown{
+    0%{opacity: 0;transform: translateY(-100px);}
+    49%{opacity: 1;transform: translateY(0px);letter-spacing: 1px;}
+    50%{opacity: 1;transform: translateY(0px);letter-spacing: 3px;}
+    55%{opacity: 1;transform: translateY(0px);letter-spacing: 1px;}
+    60%{opacity: 1;transform: translateY(-50px);}
+    80%{opacity: 1;transform: translateY(0px);}
+    85%{opacity: 1;transform: translateY(-10px);}
+    100%{opacity: 1;transform: translateY(0px);}
+}
+
+
